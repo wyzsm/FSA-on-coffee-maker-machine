@@ -1,1 +1,3 @@
-# FSA-on-coffee-maker-machine
+# FSA on Coffee Maker Machine
+
+UAS mata kuliah Teori Bahasa dan Otomata
