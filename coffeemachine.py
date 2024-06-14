@@ -1,7 +1,7 @@
-# coffee size: S (7k), M (10k), L (12k)
+# coffee size: S (Rp7k), M (Rp10k), L (Rp12k)
 # coffee menu: americano, caffe latte, cappuccino, macchiato, palm sugar
 # coffee variants: hot, cold
-# steps: (q0) pick size, (q1) insert money, (q2) pick menu, (q3) hot/cold, (q4) deliver
+# steps: (q0) pick size, (q1) payment, (q2) pick menu, (q3) hot or cold, (q4) deliver
 
 
 class FSA:
@@ -78,4 +78,4 @@ while not fsa.is_accepted():
 
 if fsa.is_accepted():
     print("\nThe purchase process is complete. Enjoy your Coffee.")
-    print(f"Purchase ID: {fsa.get_inputted_string()}")
+    print(f"Purchase ID: {fsa.get_inputted_string()}\n")

@@ -40,30 +40,14 @@ class FSA:
 
         return state_sekarang in self.final_state
 
-    def transition(self, input_symbol):
-        if (self.current_state, input_symbol) in self.delta:
-            self.current_state = self.delta[(self.current_state, input_symbol)]
-            self.inputted_symbols.append(input_symbol)
-            print(f"\nTransitioned to {self.current_state}")
-        else:
-            print(
-                f"\nInvalid choice from {self.current_state} with input {input_symbol}"
-            )
-
-    def is_accepted(self):
-        return self.current_state in self.final_state
-
-    def get_inputted_string(self):
-        return "".join(self.inputted_symbols)
-
 
 fsa = FSA()
-string_input = input("String yang ingin dibaca: ")
+string_input = input("\nString yang ingin dibaca: ")
 print("")
 if fsa.diterima(string_input):
-    print(f'\nHASIL AKHIR: String "{string_input}" diterima.')
+    print(f'\nHASIL AKHIR: String "{string_input}" diterima.\n')
 else:
-    print(f'\nHASIL AKHIR: String "{string_input}" ditolak.')
+    print(f'\nHASIL AKHIR: String "{string_input}" ditolak.\n')
 
 
 # if fsa.diterima():
